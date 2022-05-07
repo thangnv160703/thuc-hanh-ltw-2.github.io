@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Product Maintenance</title>
+</head>
+
+<body>
+	<h1>Products</h1>
+	
+	<div th:each="product : ${products}">
+		<span th:text="${product.code}"></span>
+		<span th:text="${product.description}"></span>
+		<span th:text="${product.price}"></span>
+		<span th:text="Edit"></span>
+		<span th:text="Delete"></span>
+	</div>
+	
+	<button><a href="/add">Add Product</a></button>
+</body>
+
+</html>
